@@ -1,0 +1,6 @@
+{
+  "model_version": "baseline",
+  "batch_size": 16,
+  "num_epochs": 9,
+  "num_workers": 4
+}

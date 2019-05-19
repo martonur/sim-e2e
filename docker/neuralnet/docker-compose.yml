@@ -1,0 +1,15 @@
+version: '2'
+services:
+  pytorch:
+    image: martonur/pytorch
+    volumes:
+     - /tmp/.X11-unix:/tmp/.X11-unix:rw
+     - ../../neuralnet:/workspace
+     - ../../../training_data:/training_data
+     - ../../shared_folder:/shared_folder
+     - ../../torcs/torcs-1.3.6/captures:/image_extraction
+    environment:
+     - DISPLAY
+    ipc: host
+    network_mode: "host"
+    working_dir: /workspace

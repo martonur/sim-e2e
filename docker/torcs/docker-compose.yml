@@ -1,0 +1,13 @@
+version: '2'
+services:
+  torcs:
+    image: martonur/mactorcs
+    volumes:
+     - /tmp/.X11-unix:/tmp/.X11-unix:rw
+     - ../../torcs/torcs-1.3.6:/torcs/torcs-1.3.6
+     - ../../torcs/.torcs:/root/.torcs
+     - ../../shared_folder:/shared_folder
+    network_mode: "host"
+    environment:
+     - DISPLAY
+    working_dir: /torcs/torcs-1.3.6
